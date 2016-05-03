@@ -1,0 +1,73 @@
+<nav class="nav">
+    <div class="banner">
+        <div class="logo">
+            <img src="/app/img/logo.png">
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a [routerLink]="[routes.home.name]">{{routes.home.data.title}}</a>
+                </li>
+                <li>Our Team
+                    <ul>
+                        <li>
+                            <a [routerLink]="[routes.ambassadors.name]">{{routes.ambassadors.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.executiveOfficers.name]">{{routes.executiveOfficers.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.localChapters.name]">{{routes.localChapters.data.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>About Us
+                    <ul>
+                        <li>
+                            <a [routerLink]="[routes.mission.name]">{{routes.mission.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.whoWeAre.name]">{{routes.whoWeAre.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.partnersSponsors.name]">{{routes.partnersSponsors.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.contactUs.name]">{{routes.contactUs.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.ourImpact.name]">{{routes.ourImpact.data.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li> Get Involved
+                    <ul>
+                        <li>
+                            <a [routerLink]="[routes.startChapter.name]">{{routes.startChapter.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.joinTeam.name]">{{routes.joinTeam.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.becomeAmbassador.name]">{{routes.becomeAmbassador.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.hostEvent.name]">{{routes.hostEvent.data.title}}</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="[routes.wearWarrior.name]">{{routes.wearWarrior.data.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a [routerLink]="[routes.blog.name]">{{routes.blog.data.title}}</a>
+                </li>
+                <li>
+                    <a [routerLink]="[routes.events.name]">{{routes.events.data.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

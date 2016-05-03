@@ -1,0 +1,231 @@
+header {
+    height: 600px;
+
+    background-size: 100% !important;
+}
+
+.nav {
+    display: inline-block;
+
+    width: 100%;
+    max-height: 100px;
+    padding: 15px;
+
+    border-width: 0;
+    background-color: rgba(0, 0, 0, .0);
+    background-image: -webkit-gradient(linear, 50.00% .00%, 50.00% 100.00%, color-stop( 0%, rgba(0, 0, 0, .00)), color-stop( 100%, rgba(0, 0, 0, .00)));
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .00) 0%, rgba(0, 0, 0, .00) 100%);
+    background-image:         linear-gradient(180deg, rgba(0, 0, 0, .00) 0%, rgba(0, 0, 0, .00) 100%);
+    -webkit-box-shadow: 0 0;
+            box-shadow: 0 0;
+}
+
+
+.nav > .logo {
+    float: left;
+
+    max-width: 100%;
+    height: 100px;
+}
+
+.nav .nav-list {
+    float: right;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.nav li {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.nav a {
+    display: block;
+
+    color: #fff;
+}
+
+.nav a:hover {
+    //background-color: #005f5f;
+}
+
+.nav a.active {
+    cursor: default;
+
+    color: #444;
+    background-color: #aaa;
+}
+
+
+/* Sub Menus */
+
+.nav li li {
+    font-size: 12px;
+
+    display: inline-block;
+
+    list-style: none;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+/*******************************************
+   Style menu for larger screens
+
+   Using 650px (130px each * 5 items), but ems
+   or other values could be used depending on other factors
+********************************************/
+
+@media screen and (min-width: 650px) {
+    .nav li {
+        font-size: 13px;
+        line-height: 50px;
+
+        display: inline-block;
+
+        height: 50px;
+        margin-right: 45px;
+
+        border-bottom: none;
+    }
+
+    .nav > ul > li > a {
+        padding-left: 0;
+    }
+    /* Sub Menus */
+    .nav li ul {
+        position: absolute;
+
+        display: none;
+
+        width: 250px;
+        padding-left: 15px;
+
+        background-color: #333333;
+    }
+    .nav li:hover ul {
+        display: block;
+    }
+    .nav li ul li {
+        display: block;
+    }
+}
+
+
+footer .footer-container {
+    position: absolute;
+
+    display: block;
+
+    width: 100%;
+
+    color: #fff;
+    background-color: #333333;
+}
+
+footer .footer-nav {
+    padding: 50px;
+
+    text-align: center;
+}
+
+footer .footer-nav h4 {
+    color: #d73224;
+}
+
+footer .footer-nav a {
+    color: #fff;
+}
+
+footer .social {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer .social ul {
+    margin: 0;
+    padding: 5px;
+    display: inline-table;
+}
+
+footer .social ul li {
+    display: inline;
+
+    margin: 5px;
+
+    list-style: none outside none;
+}
+
+footer .social i {
+    font-size: 22px;
+
+    width: 40px;
+    height: 40px;
+    padding-top: 12px;
+
+    -webkit-transition: all ease .3s;
+       -moz-transition: all ease .3s;
+        -ms-transition: all ease .3s;
+         -o-transition: all ease .3s;
+            transition: all ease .3s;
+    text-align: center;
+
+    color: #fff;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #d73224;
+
+         -o-border-radius: 50%;
+}
+
+footer .social i:hover {
+    -webkit-transition: all ease .3s;
+       -moz-transition: all ease .3s;
+        -ms-transition: all ease .3s;
+         -o-transition: all ease .3s;
+            transition: all ease .3s;
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.social .fa-facebook:hover {
+    /* round facebook icon*/
+    background: #4060a5;
+}
+
+.social .fa-twitter:hover {
+    /* round twitter icon*/
+    background: #00abe3;
+}
+
+.social .fa-linkedin:hover {
+    /* round linkedin icon*/
+    background: #0094bc;
+}
+
+footer .legal {
+    font-size: 8px;
+
+    float: right;
+
+    max-width: 350px;
+}
