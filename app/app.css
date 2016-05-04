@@ -20,7 +20,6 @@ header {
             box-shadow: 0 0;
 }
 
-
 .nav > .logo {
     float: left;
 
@@ -104,7 +103,6 @@ header {
 
         border-bottom: none;
     }
-
     .nav > ul > li > a {
         padding-left: 0;
     }
@@ -117,7 +115,7 @@ header {
         width: 250px;
         padding-left: 15px;
 
-        background-color: #333333;
+        background-color: #333;
     }
     .nav li:hover ul {
         display: block;
@@ -127,6 +125,43 @@ header {
     }
 }
 
+.banner-text {
+    position: relative;
+
+    height: 80%;
+
+    text-align: center;
+
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.banner-text h3 {
+    font-family: 'adobe-garamond-pro';
+    font-size: 24px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 25%;
+
+    width: 100%;
+}
+
+.banner-text h1 {
+    font-size: 68px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 35%;
+
+    width: 100%;
+
+    text-transform: uppercase;
+}
+
+/******************************
+* Footer
+*******************************/
 
 footer .footer-container {
     position: absolute;
@@ -136,7 +171,7 @@ footer .footer-container {
     width: 100%;
 
     color: #fff;
-    background-color: #333333;
+    background-color: #333;
 }
 
 footer .footer-nav {
@@ -156,13 +191,15 @@ footer .footer-nav a {
 footer .social {
     margin: 0;
     padding: 0;
+
     text-align: center;
 }
 
 footer .social ul {
+    display: inline-table;
+
     margin: 0;
     padding: 5px;
-    display: inline-table;
 }
 
 footer .social ul li {
@@ -217,9 +254,9 @@ footer .social i:hover {
     background: #00abe3;
 }
 
-.social .fa-linkedin:hover {
-    /* round linkedin icon*/
-    background: #0094bc;
+.social .fa-instagram:hover {
+    /* round instagram icon*/
+    background: #375989;
 }
 
 footer .legal {
