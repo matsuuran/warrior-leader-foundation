@@ -1,38 +1,42 @@
-<header [ngStyle]="{'background': 'url(' + bannerImage + ') no-repeat center center', 'background-size': '100%'}">
+<header>
     <nav class="nav">
-        <img class="logo" src="/app/img/logo.png">
-        <div class="nav-list">
-            <ul>
-                <li><a [routerLink]="[routes.home.name]" (click)="setBanner(routes.home.data.bannerImage)">{{routes.home.data.title}}</a></li>
-                <li>Our Team
-                    <ul>
-                        <li><a [routerLink]="[routes.ambassadors.name]" (click)="setBanner(routes.ambassadors.data.bannerImage)">{{routes.ambassadors.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.executiveOfficers.name]" (click)="setBanner(routes.executiveOfficers.data.bannerImage)">{{routes.executiveOfficers.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.localChapters.name]" (click)="setBanner(routes.localChapters.data.bannerImage)">{{routes.localChapters.data.title}}</a></li>
-                    </ul>
-                </li>
-                <li>About Us
-                    <ul>
-                        <li><a [routerLink]="[routes.mission.name]" (click)="setBanner(routes.mission.data.bannerImage)">{{routes.mission.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.whoWeAre.name]" (click)="setBanner(routes.whoWeAre.data.bannerImage)">{{routes.whoWeAre.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.partnersSponsors.name]" (click)="setBanner(routes.partnersSponsors.data.bannerImage)">{{routes.partnersSponsors.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.contactUs.name]" (click)="setBanner(routes.contactUs.data.bannerImage)">{{routes.contactUs.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.ourImpact.name]" (click)="setBanner(routes.ourImpact.data.bannerImage)">{{routes.ourImpact.data.title}}</a></li>
-                    </ul>
-                </li>
-                <li> Get Involved
-                    <ul>
-                        <li><a [routerLink]="[routes.startChapter.name]" (click)="setBanner(routes.startChapter.data.bannerImage)">{{routes.startChapter.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.joinTeam.name]" (click)="setBanner(routes.joinTeam.data.bannerImage)">{{routes.joinTeam.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.becomeAmbassador.name]" (click)="setBanner(routes.becomeAmbassador.data.bannerImage)">{{routes.becomeAmbassador.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.hostEvent.name]" (click)="setBanner(routes.hostEvent.data.bannerImage)">{{routes.hostEvent.data.title}}</a></li>
-                        <li><a [routerLink]="[routes.wearWarrior.name]" (click)="setBanner(routes.wearWarrior.data.bannerImage)">{{routes.wearWarrior.data.title}}</a></li>
-                    </ul>
-                </li>
-                <li><a [routerLink]="[routes.blog.name]" (click)="setBanner(routes.blog.data.bannerImage)">{{routes.blog.data.title}}</a></li>
-                <li><a [routerLink]="[routes.events.name]" (click)="setBanner(routes.events.data.bannerImage)">{{routes.events.data.title}}</a></li>
-            </ul>
-        </div>
+        <a [routerLink]="[routes.home.name]" style="padding: 0;">
+            <img class="logo" src="/app/img/logo.png">
+        </a>
+        <ul class="nav-list">
+            <li><a [routerLink]="[routes.home.name]">{{routes.home.data.title}}</a></li>
+            <li>
+                <a [routerLink]="[routes.ambassadors.name]">Our Team</a>
+                <ul>
+                    <li><a [routerLink]="[routes.ambassadors.name]">{{routes.ambassadors.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.executiveOfficers.name]">{{routes.executiveOfficers.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.localChapters.name]">{{routes.localChapters.data.title}}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a [routerLink]="[routes.mission.name]">About Us</a>
+                <ul>
+                    <li><a [routerLink]="[routes.mission.name]">{{routes.mission.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.whoWeAre.name]">{{routes.whoWeAre.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.partnersSponsors.name]">{{routes.partnersSponsors.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.contactUs.name]">{{routes.contactUs.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.ourImpact.name]">{{routes.ourImpact.data.title}}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a [routerLink]="[routes.startChapter.name]">Get Involved</a>
+                <ul>
+                    <li><a [routerLink]="[routes.startChapter.name]">{{routes.startChapter.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.joinTeam.name]">{{routes.joinTeam.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.becomeAmbassador.name]">{{routes.becomeAmbassador.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.hostEvent.name]">{{routes.hostEvent.data.title}}</a></li>
+                    <li><a [routerLink]="[routes.wearWarrior.name]">{{routes.wearWarrior.data.title}}</a></li>
+                </ul>
+            </li>
+            <li><a [routerLink]="[routes.blog.name]">{{routes.blog.data.title}}</a></li>
+            <li><a [routerLink]="[routes.events.name]">{{routes.events.data.title}}</a></li>
+            <li><a class="btn-donate" [routerLink]="[routes.events.name]">Donate</a></li>
+        </ul>
     </nav>
 </header>
 <router-outlet></router-outlet>
@@ -42,46 +46,46 @@
             <div class="col-md-2"></div>
             <div class="col-md-2">
                 <h4>Pages</h4>
-                <a [routerLink]="[routes.home.name]" (click)="setBanner(routes.home.data.bannerImage)">{{routes.home.data.title}}</a>
+                <a [routerLink]="[routes.home.name]">{{routes.home.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.blog.name]" (click)="setBanner(routes.blog.data.bannerImage)">{{routes.blog.data.title}}</a>
+                <a [routerLink]="[routes.blog.name]">{{routes.blog.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.events.name]" (click)="setBanner(routes.events.data.bannerImage)">{{routes.events.data.title}}</a>
+                <a [routerLink]="[routes.events.name]">{{routes.events.data.title}}</a>
                 <br>
             </div>
             <div class="col-md-2">
                 <h4>Our Team</h4>
-                <a [routerLink]="[routes.ambassadors.name]" (click)="setBanner(routes.ambassadors.data.bannerImage)">{{routes.ambassadors.data.title}}</a>
+                <a [routerLink]="[routes.ambassadors.name]">{{routes.ambassadors.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.executiveOfficers.name]" (click)="setBanner(routes.executiveOfficers.data.bannerImage)">{{routes.executiveOfficers.data.title}}</a>
+                <a [routerLink]="[routes.executiveOfficers.name]">{{routes.executiveOfficers.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.localChapters.name]" (click)="setBanner(routes.localChapters.data.bannerImage)">{{routes.localChapters.data.title}}</a>
+                <a [routerLink]="[routes.localChapters.name]">{{routes.localChapters.data.title}}</a>
                 <br>
             </div>
             <div class="col-md-2">
                 <h4>About Us</h4>
-                <a [routerLink]="[routes.mission.name]" (click)="setBanner(routes.mission.data.bannerImage)">{{routes.mission.data.title}}</a>
+                <a [routerLink]="[routes.mission.name]">{{routes.mission.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.whoWeAre.name]" (click)="setBanner(routes.whoWeAre.data.bannerImage)">{{routes.whoWeAre.data.title}}</a>
+                <a [routerLink]="[routes.whoWeAre.name]">{{routes.whoWeAre.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.partnersSponsors.name]" (click)="setBanner(routes.partnersSponsors.data.bannerImage)">{{routes.partnersSponsors.data.title}}</a>
+                <a [routerLink]="[routes.partnersSponsors.name]">{{routes.partnersSponsors.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.contactUs.name]" (click)="setBanner(routes.contactUs.data.bannerImage)">{{routes.contactUs.data.title}}</a>
+                <a [routerLink]="[routes.contactUs.name]">{{routes.contactUs.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.ourImpact.name]" (click)="setBanner(routes.ourImpact.data.bannerImage)">{{routes.ourImpact.data.title}}</a>
+                <a [routerLink]="[routes.ourImpact.name]">{{routes.ourImpact.data.title}}</a>
                 <br>
             </div>
             <div class="col-md-2">
                 <h4>Get Involved</h4>
-                <a [routerLink]="[routes.startChapter.name]" (click)="setBanner(routes.startChapter.data.bannerImage)">{{routes.startChapter.data.title}}</a>
+                <a [routerLink]="[routes.startChapter.name]">{{routes.startChapter.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.joinTeam.name]" (click)="setBanner(routes.joinTeam.data.bannerImage)">{{routes.joinTeam.data.title}}</a>
+                <a [routerLink]="[routes.joinTeam.name]">{{routes.joinTeam.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.becomeAmbassador.name]" (click)="setBanner(routes.becomeAmbassador.data.bannerImage)">{{routes.becomeAmbassador.data.title}}</a>
+                <a [routerLink]="[routes.becomeAmbassador.name]">{{routes.becomeAmbassador.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.hostEvent.name]" (click)="setBanner(routes.hostEvent.data.bannerImage)">{{routes.hostEvent.data.title}}</a>
+                <a [routerLink]="[routes.hostEvent.name]">{{routes.hostEvent.data.title}}</a>
                 <br>
-                <a [routerLink]="[routes.wearWarrior.name]" (click)="setBanner(routes.wearWarrior.data.bannerImage)">{{routes.wearWarrior.data.title}}</a>
+                <a [routerLink]="[routes.wearWarrior.name]">{{routes.wearWarrior.data.title}}</a>
                 <br>
             </div>
             <div class="col-md-2"></div>
