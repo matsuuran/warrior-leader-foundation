@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/common', 'ng2-bootstrap/ng2-bootstrap'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,21 +10,41 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, common_1, ng2_bootstrap_1;
     var HomeComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
+            },
+            function (ng2_bootstrap_1_1) {
+                ng2_bootstrap_1 = ng2_bootstrap_1_1;
             }],
         execute: function() {
             HomeComponent = (function () {
                 function HomeComponent() {
+                    this.myInterval = 5000;
+                    this.noWrapSlides = false;
+                    this.slides = [];
+                    this.slides.push({
+                        image: "app/img/banner-home.jpg",
+                    });
+                    this.slides.push({
+                        image: "app/img/banner-chapter.jpg",
+                    });
+                    this.slides.push({
+                        image: "app/img/banner-blog.jpg",
+                    });
                 }
                 HomeComponent = __decorate([
                     core_1.Component({
                         selector: 'home',
-                        templateUrl: 'app/home/home.html'
+                        directives: [ng2_bootstrap_1.CAROUSEL_DIRECTIVES, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES],
+                        templateUrl: 'app/home/home.html',
+                        styleUrls: ['app/home/home.css'],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HomeComponent);

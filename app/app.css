@@ -1,8 +1,13 @@
 header {
-    height: 130px;
+    height: 110px;
 
     background-color: #5c4a47;
     background-size: 100% !important;
+}
+
+.nav-trim {
+    height: 5px;
+    background-color: #d73224;
 }
 
 .nav {
@@ -12,15 +17,17 @@ header {
 }
 
 
+
 .nav .logo {
     float: left;
 
     max-width: 100%;
-    height: 100px;
+    height: 85px;
+    margin-top: -8px;
 }
 
 .nav .nav-list {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .nav ul {

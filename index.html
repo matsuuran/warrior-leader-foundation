@@ -19,6 +19,8 @@
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
+
 
 </head>
 <!-- 2. Configure SystemJS -->
@@ -29,6 +31,10 @@ System.config({
             format: 'register',
             defaultExtension: 'js'
         }
+    },
+
+    map: {
+        moment: 'node_modules/moment/moment.js'
     }
 });
 System.import('app/main')
