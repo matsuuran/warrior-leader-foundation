@@ -1,4 +1,5 @@
 <header>
+    <div class="nav-trim"></div>
     <nav class="nav">
         <a [routerLink]="[routes.home.name]" style="padding: 0;">
             <img class="logo" src="/app/img/logo.png">
@@ -38,9 +39,11 @@
             <li><a class="btn-donate" [routerLink]="[routes.events.name]">Donate</a></li>
         </ul>
     </nav>
+    <div class="nav-trim"></div>
 </header>
 <router-outlet></router-outlet>
 <footer>
+    <div class="nav-trim"></div>
     <div class="footer-container">
         <div class="row footer-nav">
             <div class="col-md-2"></div>
