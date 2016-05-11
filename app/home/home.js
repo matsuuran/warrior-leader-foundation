@@ -44,7 +44,7 @@ System.register(['angular2/core', 'angular2/common', 'ng2-bootstrap/ng2-bootstra
                         selector: 'home',
                         directives: [ng2_bootstrap_1.CAROUSEL_DIRECTIVES, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES],
                         templateUrl: 'app/home/home.html',
-                        styleUrls: ['app/home/home.css'],
+                        styleUrls: ['app/home/home.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HomeComponent);

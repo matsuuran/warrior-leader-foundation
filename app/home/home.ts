@@ -4,9 +4,9 @@ import {CAROUSEL_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
 	selector: 'home',
-	 directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
+	directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
 	templateUrl: 'app/home/home.html',
-	styleUrls: ['app/home/home.css'],
+	styleUrls: ['app/home/home.css']
 })
 
 export class HomeComponent {
