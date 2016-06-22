@@ -1,0 +1,104 @@
+<header>
+    <nav class="nav">
+        <a [routerLink]="['Home']" style="padding: 0;">
+            <img class="logo" src="/assets/img/logo.png">
+        </a>
+        <ul class="nav-list">
+            <li><a [routerLink]=" ['Home'] ">Home</a></li>
+            <li>
+                <a [routerLink]="['ExecutiveOfficers']">Our Team</a>
+                <ul>
+                    <li><a [routerLink]="['ExecutiveOfficers']">Executive Officers</a></li>
+                    <li><a [routerLink]="['Ambassadors']">Ambassadors</a></li>
+                    <li><a [routerLink]="['LocalChapters']">Local Chapters</a></li>
+                </ul>
+            </li>
+            <li>
+                <a [routerLink]="['WhoWeAre']">About Us</a>
+                <ul>
+                    <li><a [routerLink]="['WhoWeAre']">Who We Are</a></li>
+                    <li><a [routerLink]="['PartnersSponsors']">Partners and Sponsors</a></li>
+                    <li><a [routerLink]="['ContactUs']">Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a [routerLink]="['OurImpact']">Our Impact</a></li>
+            <li>
+                <a [routerLink]="['StartChapter']">Get Involved</a>
+                <ul>
+                    <li><a [routerLink]="['JoinTeam']">Join the Team</a></li>
+                    <li><a [routerLink]="['StartChapter']">Start a Chapter</a></li>
+                    <li><a [routerLink]="['BecomeAmbassador']">Become an Ambassador</a></li>
+                    <li><a [routerLink]="['HostEvent']">Host an Event</a></li>
+                    <li><a [routerLink]="['WearWarrior']">Wear the Warrior</a></li>
+                </ul>
+            </li>
+<!--             <li><a [routerLink]="['Blog']">Blog</a></li>
+            <li><a [routerLink]="['Events']">Events</a></li> -->
+            <li><a class="btn-donate" href="https://squareup.com/store/warriorleaderfoundation">Donate</a></li>
+        </ul>
+    </nav>
+    <div class="nav-trim"></div>
+</header>
+<router-outlet></router-outlet>
+<footer>
+    <div class="nav-trim"></div>
+    <div class="footer-container">
+        <div class="row footer-nav">
+            <div class="col-md-3"></div>
+<!--             <div class="col-md-2">
+                <h4>Pages</h4>
+                <a [routerLink]="['Home']">Home</a>
+                <br>
+                <a [routerLink]="['Blog']">Blog</a>
+                <br>
+                <a [routerLink]="['Events']">Events</a>
+                <br>
+            </div>
+ -->            <div class="col-md-2">
+                <h4>Our Team</h4>
+                <a [routerLink]="['Ambassadors']">Ambassadors</a>
+                <br>
+                <a [routerLink]="['ExecutiveOfficers']">Executive Officers</a>
+                <br>
+                <a [routerLink]="['LocalChapters']">Local Chapters</a>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h4>About Us</h4>
+                <a [routerLink]="['WhoWeAre']">Who We Are</a>
+                <br>
+                <a [routerLink]="['PartnersSponsors']">Partners and Sponsors</a>
+                <br>
+                <a [routerLink]="['ContactUs']">Contact Us</a>
+                <br>
+                <a [routerLink]="['OurImpact']">Our Impact</a>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h4>Get Involved</h4>
+                <a [routerLink]="['StartChapter']">Start a Chapter</a>
+                <br>
+                <a [routerLink]="['JoinTeam']">Join the Team</a>
+                <br>
+                <a [routerLink]="['BecomeAmbassador']">Become an Ambassador</a>
+                <br>
+                <a [routerLink]="['HostEvent']">Host an Event</a>
+                <br>
+                <a [routerLink]="['WearWarrior']">Wear the Warrior</a>
+                <br>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="legal">
+            <p>The Warrior Leader Foundation, Inc. is a 501c(3) pending nonprofit with headquarters in Fayetteville, NC. TWLF, Inc.'s Federal ID number for donations is 81-0888376 Copyright: The Warrior Leader Foundation, Inc., All rights reserved.</p>
+        </div>
+    </div>
+</footer>

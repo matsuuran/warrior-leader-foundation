@@ -1,0 +1,68 @@
+/* Master Styles */
+
+h1 {
+    font-family: 'Open Sans', sans-serif !important;
+    // font-size: 250% !important;
+    color: #453735 !important;
+}
+
+h2,
+h3 {
+    font-family: font-family: 'Open Sans', sans-serif !important;
+    font-weight: lighter !important;
+    color: #6a5f5d;
+}
+
+body,
+input[text],
+button {
+    font-family: 'Open Sans', sans-serif !important;
+    color: #453735 !important;
+}
+
+.content-container {
+    padding-top: 50px;
+    padding-right: 20%;
+    padding-bottom: 50px;
+    padding-left: 20%;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.red-bold {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #d73224;
+}
+
+.red {
+    color: #d73224 !important;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+
+}
+
+img.vcenter {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+hr {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+figure {
+    margin: 10px !important;
+}

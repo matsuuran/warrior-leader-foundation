@@ -1,0 +1,99 @@
+<div class="content-container">
+    <h1>Become a TWLF Ambassador</h1>
+    <p>The Warrior Leader Foundation Ambassadors are a direct reflection of the type of culture and environment we are striving to build within and around our foundation. our Ambassadors work to spread the good word of our cause through their actions within their communities and beyond.</p>
+    <p>TWLF Ambassadors need to be either current or veteran military and/or first responders who live and embody the warrior spirit through their physical activities and community involvement. TWLF Ambassadors work to raise funds and awareness of our cause by representing our foundation as they participate in events such as:</p>
+    <ul>
+        <li>Running Races</li>
+        <li>Crossfit Competitions</li>
+        <li>Lifting Competitions</li>
+        <li>Shooting Competitions</li>
+        <li>MMA/Boxing</li>
+        <li>Marathons/Triathlons</li>
+        <li>Biking Events/Competitions</li>
+        <li>GoRuck Challenges</li>
+        <li>Iron Mans</li>
+        <li>Obstacle Races (Spartan Race, Warrior Dash, Tough Mudder, etc.)</li>
+    </ul>
+    <p>The above are just a few examples of how a TWLF Ambassador can represent the warrior spirit that our organization strives to embody. Through our physical struggles and service to our communities, we can unite and honor the sacrifices that the men and women of our military and first responder communities have made in the line of duty.</p>
+    <p>Requirements of a TWLF Ambassador:</p>
+    <ul>
+        <li>Commit to Participating in 4 Major events per year similar to what we listed above</li>
+        <li>Establish Good Relationship with Local Chapter if Applicable</li>
+        <li>Represent Yourself & The Warrior Leader Foundation in accordance to the TWLF Code of Conduct & Integrity and the TWLF Policies and Procedures AT ALL TIMES!</li>
+        <li>Seek other potential TWLF, Inc Ambassadors you feel would be a good representative of the WARIOR SPIRIT.</li>
+        <li>Maintain good record keeping by creating a GMail account "firstname.lastinitial.twlfin@gmail.com", i.e. "john.doe.twlfinc@gmail.com".</li>
+        <li>Maintain an active Social Media presence on Facebook and Instagram with posts at least once per week.</li>
+        <li>Link your Social Media outlets with the National TWLF Social Media outlets.</li>
+        <li>Engage outside for-profit/nonprofit organizations to build strong relationships for TWLF</li>
+        <li>$50 minimum donation semi-annually to the National TWLF Foundation. ($100/year)</li>
+        <li>Refer supporters to our TWLF Website (www.warriorleaderfoundation.org) and Social Media outlets.</li>
+    </ul>
+    <hr>
+    <h1>In Order to Apply</h1>
+    <h3>Fill out the Tollowing Form and Submit</h3>
+    <form (ngSubmit)="onSubmit()" #becomeAmbassadorForm="ngForm">
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="name">Name</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="name" placeholder="Name" required [(ngModel)]="model.name" ngControl="name" #name="ngForm">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="email">Email</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="email" placeholder="Email" required [(ngModel)]="model.email" ngControl="email" #email="ngForm" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                    <div [hidden]="email.valid || email.pristine">
+                        <div *ngIf="email.errors && email.errors.required" class="alert alert-danger">Email required</div>
+                        <div *ngIf="email.errors && email.errors.pattern" class="alert alert-danger">Email invalid</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="location">Current Location</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="location" placeholder="City, State" required [(ngModel)]="model.location" ngControl="location" #location="ngForm">
+                    <div [hidden]="location.valid || location.pristine" class="alert alert-danger">Location required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="experience">Military/First Responder Experience</label>
+                <div class="input-group wide">
+                    <textarea class="input-group wide" name="experience" rows="10" required [(ngModel)]="model.experience" ngControl="experience" #experience="ngForm"></textarea>
+                    <div [hidden]="experience.valid || experience.pristine" class="alert alert-danger">Experience required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="jobExperience">Other Job Experience</label>
+                <div class="input-group wide">
+                    <textarea class="input-group wide" name="jobExperience" rows="10" required [(ngModel)]="model.jobExperience" ngControl="jobExperience" #jobExperience="ngForm"></textarea>
+                    <div [hidden]="jobExperience.valid || jobExperience.pristine" class="alert alert-danger">Job Experience required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="reason">Why do you want to become a TWLF Ambassador?</label>
+                <div class="input-group wide">
+                    <textarea class="input-group wide" name="reason" rows="10" required [(ngModel)]="model.reason" ngControl="reason" #reason="ngForm"></textarea>
+                    <div [hidden]="reason.valid || reason.pristine" class="alert alert-danger">Reason required</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-default" [disabled]="!becomeAmbassadorForm.form.valid">Submit</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+.wide {
+    width: 100%;
+}
+
+button {
+    float: right;
+}
+
+form {
+    margin-top: 50px;
+}
+
+textarea {
+  padding-top: 5px;
+  padding-left: 10px;
+}

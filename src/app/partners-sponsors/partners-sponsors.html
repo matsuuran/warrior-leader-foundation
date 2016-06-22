@@ -1,0 +1,72 @@
+<div class="content-container">
+    <h1>Partners and Sponsors</h1>
+    <p>Our partners and sponsors are a vital part of our success as a nonprofit organization. With your help, we are able to spread the word of our cause further than we would be able to alone while also helping and supporting your business along the way. </p>
+    <p>Partnering with or sponsoring the Warrior Leader Foundation is an awesome way to show your organization's dedication and support for America's military and first responder communities and their families.</p>
+    <p>Partnering with or sponsoring our non-profit organization is also a great way to enhance your organization's success and ability to reach a wider variety of supporters for your business.</p>
+    <hr>
+    <h1>Our Partners</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="assets/img/ai-supplements.jpg" height="150" class="center">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/img/infinite-health-fitness.png" height="150" class="center">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/img/a19.jpg" height="150" class="center">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/img/detriment.jpg" height="150" class="center">
+        </div>
+    </div>
+    <hr>
+    <h1>Become a Partner or Sponsor</h1>
+    <p>If you would like to partner with us or sponsor us, fill out the form below and one of our staff members will get back to you.</p>
+    <form (ngSubmit)="onSubmit()" #becomeSponsorForm="ngForm">
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="name">Name</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="name" placeholder="Name" required [(ngModel)]="model.name" ngControl="name" #name="ngForm">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="email">Email</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="email" placeholder="Email" required [(ngModel)]="model.email" ngControl="email" #email="ngForm" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                    <div [hidden]="email.valid || email.pristine">
+                        <div *ngIf="email.errors && email.errors.required" class="alert alert-danger">Email required</div>
+                        <div *ngIf="email.errors && email.errors.pattern" class="alert alert-danger">Email invalid</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="organization">Organization</label>
+                <div class="input-group wide">
+                    <input class="form-control" type="text" name="organization" placeholder="Organization" required [(ngModel)]="model.organization" ngControl="organization" #organization="ngForm">
+                    <div [hidden]="organization.valid || organization.pristine" class="alert alert-danger">Organization required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="reason">Comments</label>
+                <div class="input-group wide">
+                    <textarea class="input-group wide" name="comments" rows="10" [(ngModel)]="model.comments" ngControl="comments" #comments="ngForm"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-default" [disabled]="!becomeSponsorForm.form.valid">Submit</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </form>
+</div>
