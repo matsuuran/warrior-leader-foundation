@@ -55,7 +55,7 @@ export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   loading = false;
   name = 'TWLF';
-  url = 'https://twitter.com/AngularClass';
+
 
   constructor(
     public appState: AppState) {

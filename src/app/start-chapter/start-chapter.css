@@ -2,8 +2,20 @@
     width: 100%;
 }
 
-button {
+.btn-right {
     float: right;
+}
+
+.btn-collapse {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.collapse-text {
+  margin-left: 20px;
 }
 
 form {
@@ -11,11 +23,15 @@ form {
 }
 
 textarea {
-  padding-top: 5px;
-  padding-left: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
 }
 
 img {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ol {
+  list-style: none;
 }
